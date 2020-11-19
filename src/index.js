@@ -1,5 +1,33 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
+var pyshell = require('python-shell');
+
+
+// TODO MAKE INSTALLER FILE
+// virtualenv Evenv  && pip3 install -r requirements.txt && 
+
+const { exec } = require('child_process');
+exec('.\\Evenv\\Scripts\\activate && cd .\\JNotebook\\ && jupyter notebook', (err, stdout, stderr) => {
+  if (err) {
+    return err;
+  }
+
+  console.log(`stdout: ${stdout}`);
+});
+
+
+
+// exec('.\\Python\\mkvenv.py', (err, stdout, stderr) => {
+//   if (err) {
+//     return err;
+//   }
+//   console.log(`stdout: ${stdout}`);;
+// });
+
+
+
+
+
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
@@ -8,9 +36,15 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 
 const createWindow = () => {
   // Create the browser window.
+
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    minWidth: 400,
+    minHeight: 100,
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
 
   // and load the index.html of the app.
@@ -28,10 +62,16 @@ app.on('ready', createWindow);
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
+// var kill = require('tree-kill');
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
+});
+
+
+app.on('browser-window-created', function (e, window) {
+  window.setMenu(null);
 });
 
 app.on('activate', () => {
