@@ -1,32 +1,9 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
-var pyshell = require('python-shell');
-
-
-// TODO MAKE INSTALLER FILE
-// virtualenv Evenv  && pip3 install -r requirements.txt && 
-
+const fs = require('fs');
 const { exec } = require('child_process');
-exec('.\\Evenv\\Scripts\\activate && cd .\\JNotebook\\ && jupyter notebook', (err, stdout, stderr) => {
-  if (err) {
-    return err;
-  }
 
-  console.log(`stdout: ${stdout}`);
-});
-
-
-
-// exec('.\\Python\\mkvenv.py', (err, stdout, stderr) => {
-//   if (err) {
-//     return err;
-//   }
-//   console.log(`stdout: ${stdout}`);;
-// });
-
-
-
-
+exec('python -m notebook', (err, stdout, stderr) => { });
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -67,6 +44,7 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
+  exec('python -m jupyter notebook stop 8888', (err, stdout, stderr) => { });
 });
 
 
