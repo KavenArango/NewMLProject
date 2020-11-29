@@ -1,3 +1,5 @@
+const { shell } = require("electron");
+
 Vue.config.devtools = true;
 
 Vue.component('card', {
@@ -21,7 +23,7 @@ Vue.component('card', {
     this.width = this.$refs.card.offsetWidth;
     this.height = this.$refs.card.offsetHeight;
   },
-  props: ['dataImage'],
+  props: ['dataImage','link'],
   data: () => ({
     
     width: 0,
@@ -73,8 +75,7 @@ Vue.component('card', {
       }, 1000);
     },
     handleMouseClick(){
-      console.log("clicked");
-
+      require("electron").shell.openExternal(this.link);
     }
   }
 });
@@ -94,3 +95,4 @@ const app4 = new Vue({
 const app5 = new Vue({
   el: '#app5'
 });
+

@@ -1,117 +1,102 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
-  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<link rel="stylesheet" href="HoverCard.css">
-<style>
-  body {
-    background-image: url('../Images/SPPPAAAACCCCEEEE.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  }
-  </style>
-
-<body>
-  <h1 class="title">Machine Learning Portal</h1>
-  <h1 style="color: #c2970a; font-family: 'Raleway'; font-size: 54px;text-align: center;"> The Basics</h1>
-  <div id="app1" class="container">
-    <card data-image="../Images/PythonLogo.jpg">
-      <h1 slot="header">Python Programming</h1>
-      <p slot="content">Beginner python programming starter examples.</p>
-    </card>
-    <card data-image="../Images/PythonLogo.jpg">
-      <h1 slot="header">Statistics and probability</h1>
-      <p slot="content">Simple demonstrations of how to calculate basic statistic and probability models.</p>
-    </card>
-    <card data-image="../Images/PythonLogo.jpg">
-      <h1 slot="header">SQL W/ Python</h1>
-      <p slot="content">Examples of how to connect to SQL using python.</p>
-    </card>
-    <card data-image="../Images/PythonLogo.jpg">
-      <h1 slot="header">Hypothesis Testing</h1>
-      <p slot="content">How to create and utilize hypothesis testing in python.</p>
-    </card>
-  </div>
-  <h2 style="color: #c2970a; font-family: 'Raleway'; font-size: 54px;text-align: center;"> Supervised Learning</h2>
-  <h2 style="color: #c2970a; font-family: 'Raleway'; font-size: 48px;text-align: center;"> Regression</h2>
-  <div id="app2" class="container">
-      <card data-image="../Images/supervisedLearning.jpg">
-        <h1 slot="header">Linear Regression</h1>
-        <p slot="content">Use supervised learning to create a linear model.</p>
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <link rel="stylesheet" href="HoverCard.css">
+<!-- <button type="button" style="float: right;" onclick="window.close();">Close</button> -->
+  <body>
+    <div class="mask">
+    <h1 class="title">Machine Learning Portal</h1>
+    <h1 class="header">The Basics</h1>
+    <div id="app1" class="container">
+      <card data-image="../Images/PythonLogo.jpg"link="http://localhost:8884/tree">
+        <h1 slot="header">Python Programming</h1>
+        <p slot="content">Beginner python programming starter examples.</p>
       </card>
-      <card data-image="../Images/supervisedLearning.jpg">
-        <h1 slot="header">Non Linear Regression</h1>
-        <p slot="content">Use supervised learning to create a non linear model.</p>
+      <card data-image="../Images/ProbandStats.jpg"link="http://localhost:8884/tree">
+        <h1 slot="header">Statistics and Probability</h1>
+        <p slot="content">Simple demonstrations of how to calculate basic statistic and probability models.</p>
       </card>
-      <card data-image="../Images/supervisedLearning.jpg">
-        <h1 slot="header">Logistic Regression</h1>
-        <p slot="content">Use supervised learning to create a logistic model.</p>
+      <card data-image="../Images/MySQL.jpg"link="http://localhost:8884/tree">
+        <h1 slot="header">SQL W/ Python</h1>
+        <p slot="content">Examples of how to connect to SQL using python.</p>
       </card>
-  </div>
-  <h2 style="color: #c2970a; font-family: 'Raleway'; font-size: 48px;text-align: center;"> Classification</h2>
-  <div id="app5" class="container">
-    <card data-image="../Images/supervisedLearning.jpg">
-      <h1 slot="header">Linear Regression</h1>
-      <p slot="content">Use supervised learning to create a linear model.</p>
-    </card>
-    <card data-image="../Images/supervisedLearning.jpg">
-      <h1 slot="header">Bayesian Classification</h1>
-      <p slot="content">Test and train data to create a probability model.</p>
-    </card>
-    <card data-image="../Images/supervisedLearning.jpg">
-      <h1 slot="header">Decision Tree</h1>
-      <p slot="content">Create decision tree to classify data.</p>
-    </card>
-    <card data-image="../Images/supervisedLearning.jpg">
-      <h1 slot="header">Random Forest</h1>
-      <p slot="content">Use many decision trees to more precisely classify data.</p>
-    </card>
-</div>
-  <h2 style="color: #c2970a; font-family: 'Raleway'; font-size: 54px;text-align: center;"> Unsupervised Learning</h2>
-  <div id="app3" class="container">
-
-      <card data-image="../Images/un-supLearning.png">
-        <h1 slot="header">K-Mean Clustering</h1>
-        <p slot="content">Group non uniform data using k-mean clustering</p>
-      </card>
-      <card data-image="../Images/un-supLearning.png">
-        <h1 slot="header">K-Nearest Neighbor</h1>
-        <p slot="content">Group non uniform data by relative distance with K-nearest neighbor</p>
-      </card>
-  </div>
-  <h2 style="color: #c2970a; font-family: 'Raleway'; font-size: 54px;text-align: center;"> Advanced Topics</h2>
-  <div id="app4" class="container">
-
-      <card data-image="../Images/K-mean.png">
-        <h1 slot="header">Advanced Topics</h1>
-        <p slot="content">Python Programming</p>
-      </card>
-      <card data-image="../Images/K-mean.png">
-        <h1 slot="header">Advanced Topics</h1>
-        <p slot="content">Statistics and probability</p>
-      </card>
-      <card data-image="../Images/K-mean.png">
-        <h1 slot="header">Advanced Topics</h1>
-        <p slot="content">SQL through python</p>
-      </card>
-      <card data-image="../Images/K-mean.png">
-        <h1 slot="header">Advanced Topics</h1>
-        <p slot="content">Hypothesis testing</p>
+      <card data-image="../Images/HypothesisTesting.png"link="http://localhost:8884/tree">
+        <h1 slot="header">Hypothesis Testing</h1>
+        <p slot="content">How to create and utilize hypothesis testing in python.</p>
       </card>
     </div>
-
-  <!-- <iframe src="http://localhost:8874/tree" title="Stuff" width="1080" sandbox="allow-same-origin" referrerpolicy="unsafe-url"></iframe> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
-  <script defer src="./HoverCard.js"></script>
-  
-<!--  <button id="makevenv">Build Python Environment
-  </button>-->
-  <script defer src="./renderer.js"></script>
-
-</body>
+    <h1 class="header">Supervised Learning</h1>
+    <h1 class="subheader"">Regression</h1>
+    <div id="app2" class="container">
+        <card data-image="../Images/LinearRegression.png"link="http://localhost:8884/tree">
+          <h1 slot="header">Linear Regression</h1>
+          <p slot="content">Use supervised learning to create a linear model.</p>
+        </card>
+        <card data-image="../Images/NonLinearRegression.png"link="http://localhost:8884/tree">
+          <h1 slot="header">Non Linear Regression</h1>
+          <p slot="content">Use supervised learning to create a non linear model.</p>
+        </card>
+        <card data-image="../Images/LogisticRegression.png"link="http://localhost:8884/tree">
+          <h1 slot="header">Logistic Regression</h1>
+          <p slot="content">Use supervised learning to create a logistic model.</p>
+        </card>
+    </div>
+    <h1 class="subheader">Classification</h1>
+    <div id="app5" class="container">
+      <card data-image="../Images/supervisedLearning.jpg"link="http://localhost:8884/tree">
+        <h1 slot="header">Logistic Regression</h1>
+        <p slot="content">Use supervised learning to create a linear model.</p>
+      </card>
+      <card data-image="../Images/BayesianClassification.png"link="http://localhost:8884/tree">
+        <h1 slot="header">Bayesian Classification</h1>
+        <p slot="content">Test and train data to create a probability model.</p>
+      </card>
+      <card data-image="../Images/DecisionTree.png"link="http://localhost:8884/tree">
+        <h1 slot="header">Decision Tree</h1>
+        <p slot="content">Create decision tree to classify data.</p>
+      </card>
+      <card data-image="../Images/RandomForest.jpg"link="http://localhost:8884/tree">
+        <h1 slot="header">Random Forest</h1>
+        <p slot="content">Use many decision trees to more precisely classify data.</p>
+      </card>
+  </div>
+  <h1 class="header">Unsupervised Learning</h1>
+    <div id="app3" class="container">
+        <card data-image="../Images/K-MeanClustering.png"link="http://localhost:8884/tree">
+          <h1 slot="header">K-Mean Clustering</h1>
+          <p slot="content">Group non uniform data using k-mean clustering</p>
+        </card>
+        <card data-image="../Images/K-NearestNeighbor.png"link="http://localhost:8884/tree">
+          <h1 slot="header">K-Nearest Neighbor</h1>
+          <p slot="content">Group non uniform data by relative distance with K-nearest neighbor</p>
+        </card>
+    </div>
+    <h1 class="header">Advanced Topics</h1>
+    <div id="app4" class="container">
+        <card data-image="../Images/FuzzyWuzzy.png"link="http://localhost:8884/tree">
+          <h1 slot="header">Fuzzy Data Matching</h1>
+          <p slot="content">insert info</p>
+        </card>
+        <card data-image="../Images/Perceptron.jpg"link="http://localhost:8884/tree">
+          <h1 slot="header">Multi-Layer Neural Net</h1>
+          <p slot="content">insert info</p>
+        </card>
+        <card data-image="../Images/LinearProgramming.png"link="http://localhost:8884/tree">
+          <h1 slot="header">Optimization With Linear Programming</h1>
+          <p slot="content">insert info</p>
+        </card>
+        <card data-image="../Images/PySpark.jpeg"link="http://localhost:8884/tree">
+          <h1 slot="header">MPP Programming With PySpark</h1>
+          <p slot="content">insert info</p>
+        </card>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+    <script defer src="./HoverCard.js"></script>
+    <script defer src="./renderer.js"></script>
+  </div>
+  </body>
 
 </html>

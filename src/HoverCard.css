@@ -3,8 +3,35 @@ body {
   font-family: "Raleway";
   font-size: 14px;
   font-weight: 500;
-  background-color: #BCAAA4;
   -webkit-font-smoothing: antialiased;
+  background-image: url('../Images/SPPPAAAACCCCEEEE.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.mask {
+  background: rgba(0,0,0,0.4);
+}
+
+.header {
+  color: #c2970a;
+  font-family: 'Raleway';
+  font-size: 54px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #c2970a;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.subheader {
+  color: #c2970a;
+  font-family: 'Raleway';
+  font-size: 42px;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .title {
@@ -13,6 +40,10 @@ body {
   font-weight: 700;
   color: #c2970a;
   text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #c2970a;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 p {
