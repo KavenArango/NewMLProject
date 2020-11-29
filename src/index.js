@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const { exec } = require('child_process');
 
-//exec('python -m notebook', (err, stdout, stderr) => { });
+exec('python -m notebook', (err, stdout, stderr) => { });
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -45,7 +45,7 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
-  //exec('python -m jupyter notebook stop 8888', (err, stdout, stderr) => { });
+  exec('python -m jupyter notebook stop 8888', (err, stdout, stderr) => { });
 });
 
 
