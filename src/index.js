@@ -15,8 +15,8 @@ const createWindow = () => {
   // Create the browser window.
 
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1920,
+    height: 1080,
     minWidth: 400,
     minHeight: 100,
     webPreferences: {
@@ -44,7 +44,7 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
-  exec('python -m jupyter notebook stop 8888', (err, stdout, stderr) => { });
+  exec('python -m jupyter notebook stop 8874', (err, stdout, stderr) => { });
 });
 
 

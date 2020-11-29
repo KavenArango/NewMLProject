@@ -25,10 +25,10 @@ function sendToPython() {
 
 
 
-makevenv.addEventListener('click', () => {
-    sendToPython();
-});
+// makevenv.addEventListener('click', () => {
+//     sendToPython();
+// });
 
 
-makevenv.dispatchEvent(new Event('click'));
+// makevenv.dispatchEvent(new Event('click'));
 
