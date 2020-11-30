@@ -1,3 +1,5 @@
+const { shell } = require("electron");
+
 Vue.config.devtools = true;
 
 Vue.component('card', {
@@ -6,6 +8,7 @@ Vue.component('card', {
       @mousemove="handleMouseMove"
       @mouseenter="handleMouseEnter"
       @mouseleave="handleMouseLeave"
+      @click="handleMouseClick"
       ref="card">
       <div class="card"
         :style="cardStyle">
@@ -16,18 +19,11 @@ Vue.component('card', {
         </div>
       </div>
     </div>`,
-    // created() {
-    //   callExternalServices().then(() => {
-    //      this.loaded = true
-    //   })
-    // },
   mounted() {
-    //this isnt getting called.
-    console.log("setting offset");
     this.width = this.$refs.card.offsetWidth;
     this.height = this.$refs.card.offsetHeight;
   },
-  props: ['dataImage'],
+  props: ['dataImage','link'],
   data: () => ({
     
     width: 0,
@@ -65,12 +61,11 @@ Vue.component('card', {
   },
   methods: {
     handleMouseMove(e) {
-      //TODO This is still very broken
-      this.mouseX = e.pageX - 0 - this.width/2; //this.$refs.card.offsetLeft
-      this.mouseY = e.pageY -  0 - this.height/2; //this.$refs.card.offsetTop
+
+      this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width/2;
+      this.mouseY = e.pageY -  this.$refs.card.offsetTop - this.height/2;
     },
     handleMouseEnter() {
-      console.log(this.$refs.card);
       clearTimeout(this.mouseLeaveDelay);
     },
     handleMouseLeave() {
@@ -78,9 +73,26 @@ Vue.component('card', {
         this.mouseX = 0;
         this.mouseY = 0;
       }, 1000);
+    },
+    handleMouseClick(){
+      require("electron").shell.openExternal(this.link);
     }
   }
 });
-const app = new Vue({
-  el: '#app'
+const app1 = new Vue({
+  el: '#app1'
 });
+const app2 = new Vue({
+  el: '#app2'
+});
+const app3 = new Vue({
+  el: '#app3'
+});
+const app4 = new Vue({
+  el: '#app4'
+});
+
+const app5 = new Vue({
+  el: '#app5'
+});
+
