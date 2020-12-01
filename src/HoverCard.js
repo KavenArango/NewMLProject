@@ -23,9 +23,9 @@ Vue.component('card', {
     this.width = this.$refs.card.offsetWidth;
     this.height = this.$refs.card.offsetHeight;
   },
-  props: ['dataImage','link'],
+  props: ['dataImage', 'link'],
   data: () => ({
-    
+
     width: 0,
     height: 0,
     mouseX: 0,
@@ -62,19 +62,19 @@ Vue.component('card', {
   methods: {
     handleMouseMove(e) {
 
-      this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width/2;
-      this.mouseY = e.pageY -  this.$refs.card.offsetTop - this.height/2;
+      this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2;
+      this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2;
     },
     handleMouseEnter() {
       clearTimeout(this.mouseLeaveDelay);
     },
     handleMouseLeave() {
-      this.mouseLeaveDelay = setTimeout(()=>{
+      this.mouseLeaveDelay = setTimeout(() => {
         this.mouseX = 0;
         this.mouseY = 0;
       }, 1000);
     },
-    handleMouseClick(){
+    handleMouseClick() {
       require("electron").shell.openExternal(this.link);
     }
   }
