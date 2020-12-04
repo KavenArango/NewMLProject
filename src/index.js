@@ -2,7 +2,9 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const { exec } = require('child_process');
 
-exec('python -m notebook --no-browser', (err, stdout, stderr) => { });
+
+//exec('cd .//JNotebook', (err, stdout, stderr) => { });
+exec('cd .//JNotebook && python -m notebook --no-browser', (err, stdout, stderr) => { });
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
