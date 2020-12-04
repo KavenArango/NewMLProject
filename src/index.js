@@ -1,9 +1,10 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
-const fs = require('fs');
 const { exec } = require('child_process');
 
-exec('python -m notebook', (err, stdout, stderr) => { });
+
+//exec('cd .//JNotebook', (err, stdout, stderr) => { });
+exec('cd .//JNotebook && python -m notebook --no-browser', (err, stdout, stderr) => { });
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -29,7 +30,7 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
@@ -45,7 +46,7 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
-  exec('python -m jupyter notebook stop 8888', (err, stdout, stderr) => { });
+  exec('python -m jupyter notebook stop', (err, stdout, stderr) => { });
 });
 
 
@@ -63,3 +64,4 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+

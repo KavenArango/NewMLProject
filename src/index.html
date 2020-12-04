@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <link rel="stylesheet" href="HoverCard.css">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<link rel="stylesheet" href="HoverCard.css">
 <!-- <button type="button" style="float: right;" onclick="window.close();">Close</button> -->
-  <body>
-    <div class="mask">
+
+<body>
+  <div class="mask">
     <h1 class="title">Machine Learning Portal</h1>
     <h1 class="header">The Basics</h1>
     <div id="app1" class="container">
@@ -15,88 +17,90 @@
         <h1 slot="header">Python Programming</h1>
         <p slot="content">Beginner python programming starter examples.</p>
       </card>
-      <card data-image="../Images/ProbandStats.jpg"link="http://localhost:8888/tree">
+      <card data-image="../Images/ProbandStats.jpg" link="http://localhost:8888/tree">
         <h1 slot="header">Statistics and Probability</h1>
         <p slot="content">Simple demonstrations of how to calculate basic statistic and probability models.</p>
       </card>
-      <card data-image="../Images/MySQL.jpg"link="http://localhost:8888/tree">
+      <card data-image="../Images/MySQL.jpg" link="http://localhost:8888/tree">
         <h1 slot="header">SQL with Python</h1>
         <p slot="content">Examples of how to connect to SQL using python.</p>
       </card>
-      <card data-image="../Images/HypothesisTesting.png"link="http://localhost:8888/tree">
+      <card data-image="../Images/HypothesisTesting.png" link="http://localhost:8888/tree">
         <h1 slot="header">Hypothesis Testing</h1>
         <p slot="content">How to create and utilize hypothesis testing in python.</p>
       </card>
     </div>
     <h1 class="header">Supervised Learning</h1>
-    <h1 class="subheader"">Regression</h1>
+    <h1 class="subheader">Regression</h1>
     <div id="app2" class="container">
-        <card data-image="../Images/LinearRegression.png"link="http://localhost:8888/tree">
-          <h1 slot="header">Linear Regression</h1>
-          <p slot="content">Use supervised learning to create a linear model.</p>
-        </card>
-        <card data-image="../Images/NonLinearRegression.png"link="http://localhost:8888/tree">
-          <h1 slot="header">Non Linear Regression</h1>
-          <p slot="content">Use supervised learning to create a non linear model.</p>
-        </card>
-        <card data-image="../Images/LogisticRegression.png"link="http://localhost:8888/tree">
-          <h1 slot="header">Logistic Regression</h1>
-          <p slot="content">Use supervised learning to create a logistic model.</p>
-        </card>
+      <card data-image="../Images/LinearRegression.png" link="http://localhost:8888/tree">
+        <h1 slot="header">Linear Regression</h1>
+        <p slot="content">Use supervised learning to create a linear model.</p>
+      </card>
+      <card data-image="../Images/NonLinearRegression.png" link="http://localhost:8888/tree">
+        <h1 slot="header">Non Linear Regression</h1>
+        <p slot="content">Use supervised learning to create a non linear model.</p>
+      </card>
+      <card data-image="../Images/LogisticRegression.png" link="http://localhost:8888/tree">
+        <h1 slot="header">Logistic Regression</h1>
+        <p slot="content">Use supervised learning to create a logistic model.</p>
+      </card>
     </div>
     <h1 class="subheader">Classification</h1>
     <div id="app5" class="container">
-      <card data-image="../Images/LogisticRegression.png"link="http://localhost:8888/tree">
+      <card data-image="../Images/LogisticRegression.png" link="http://localhost:8888/tree">
         <h1 slot="header">Logistic Regression</h1>
         <p slot="content">Use supervised learning to create a linear model.</p>
       </card>
-      <card data-image="../Images/BayesianClassification.png"link="http://localhost:8888/tree">
+      <card data-image="../Images/BayesianClassification.png" link="http://localhost:8888/tree">
         <h1 slot="header">Bayesian Classification</h1>
         <p slot="content">Test and train data to create a probability model.</p>
       </card>
-      <card data-image="../Images/DecisionTree.png"link="http://localhost:8888/tree">
+      <card data-image="../Images/DecisionTree.png" link="http://localhost:8888/tree">
         <h1 slot="header">Decision Tree</h1>
         <p slot="content">Create decision tree to classify data.</p>
       </card>
-      <card data-image="../Images/RandomForest.jpg"link="http://localhost:8888/tree">
+      <card data-image="../Images/RandomForest.jpg" link="http://localhost:8888/tree">
         <h1 slot="header">Random Forest</h1>
         <p slot="content">Use many decision trees to more precisely classify data.</p>
       </card>
-  </div>
-  <h1 class="header">Unsupervised Learning</h1>
+    </div>
+    <h1 class="header">Unsupervised Learning</h1>
     <div id="app3" class="container">
-        <card data-image="../Images/K-MeanClustering.png"link="http://localhost:8888/tree">
-          <h1 slot="header">K-Mean Clustering</h1>
-          <p slot="content">Group non uniform data using k-mean clustering</p>
-        </card>
-        <card data-image="../Images/K-NearestNeighbor.png"link="http://localhost:8888/tree">
-          <h1 slot="header">K-Nearest Neighbor</h1>
-          <p slot="content">Group non uniform data by relative distance with K-nearest neighbor</p>
-        </card>
+      <card data-image="../Images/K-MeanClustering.png" link="http://localhost:8888/tree">
+        <h1 slot="header">K-Mean Clustering</h1>
+        <p slot="content">Group non uniform data using k-mean clustering</p>
+      </card>
+      <card data-image="../Images/K-NearestNeighbor.png" link="http://localhost:8888/tree">
+        <h1 slot="header">K-Nearest Neighbor</h1>
+        <p slot="content">Group non uniform data by relative distance with K-nearest neighbor</p>
+      </card>
     </div>
     <h1 class="header">Advanced Topics</h1>
     <div id="app4" class="container">
-        <card data-image="../Images/FuzzyWuzzy.png"link="http://localhost:8888/tree">
-          <h1 slot="header">Fuzzy Data Matching</h1>
-          <p slot="content">Probability based matching of data.</p>
-        </card>
-        <card data-image="../Images/Perceptron.jpg"link="http://localhost:8888/tree">
-          <h1 slot="header">Multi-Layer Neural Net</h1>
-          <p slot="content">Develop a perceptron network for machine learning.</p>
-        </card>
-        <card data-image="../Images/LinearProgramming.png"link="http://localhost:8888/tree">
-          <h1 slot="header">Optimization With Linear Programming</h1>
-          <p slot="content">Use python linear programming to find optimal solutions to mathematical problems.</p>
-        </card>
-        <card data-image="../Images/PySpark.jpeg"link="http://localhost:8888/tree">
-          <h1 slot="header">MPP Programming With PySpark</h1>
-          <p slot="content">Parallelization machine learning using PySpark.</p>
-        </card>
-      </div>
+      <card data-image="../Images/FuzzyWuzzy.png" link="http://localhost:8888/tree">
+        <h1 slot="header">Fuzzy Data Matching</h1>
+        <p slot="content">Probability based matching of data.</p>
+      </card>
+      <card data-image="../Images/Perceptron.jpg" link="http://localhost:8888/tree">
+        <h1 slot="header">Multi-Layer Neural Net</h1>
+        <p slot="content">Develop a perceptron network for machine learning.</p>
+      </card>
+      <card data-image="../Images/LinearProgramming.png" link="http://localhost:8888/tree">
+        <h1 slot="header">Optimization With Linear Programming</h1>
+        <p slot="content">Use python linear programming to find optimal solutions to mathematical problems.</p>
+      </card>
+      <card data-image="../Images/PySpark.jpeg" link="http://localhost:8888/tree">
+        <h1 slot="header">MPP Programming With PySpark</h1>
+        <p slot="content">Parallelization machine learning using PySpark.</p>
+      </card>
+      <button id="files">Add File</button>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
     <script defer src="./HoverCard.js"></script>
     <script defer src="./renderer.js"></script>
   </div>
-  </body>
+
+</body>
 
 </html>
