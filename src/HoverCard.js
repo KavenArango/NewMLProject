@@ -60,6 +60,8 @@ Vue.component('card', {
   },
   methods: {
     handleMouseMove(e) {
+      this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width/2;
+      this.mouseY = e.pageY -  this.$refs.card.offsetTop - this.height/2;
     },
     handleMouseEnter() {
       flipped = 0;
@@ -73,7 +75,7 @@ Vue.component('card', {
       }, 1000);
     },
     handleMouseClick(){
-      flipped ^= true;
+      flipped ^= 1;
       require("electron").shell.openExternal(this.link);
     }
   }
