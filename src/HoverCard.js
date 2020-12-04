@@ -1,5 +1,5 @@
 const { shell } = require("electron");
-
+var flipped = 0;
 Vue.config.devtools = true;
 
 Vue.component('card', {
@@ -10,8 +10,7 @@ Vue.component('card', {
       @mouseleave="handleMouseLeave"
       @click="handleMouseClick"
       ref="card">
-      <div class="card"
-        :style="cardStyle">
+      <div class="card":style="cardStyle">
         <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
         <div class="card-info">
           <slot name="header"></slot>
@@ -30,7 +29,7 @@ Vue.component('card', {
     height: 0,
     mouseX: 0,
     mouseY: 0,
-    mouseLeaveDelay: null
+    mouseLeaveDelay: null,
   }),
   computed: {
     mousePX() {
@@ -40,7 +39,8 @@ Vue.component('card', {
       return this.mouseY / this.height;
     },
     cardStyle() {
-      const rX = this.mousePX * 30;
+      const thingOne = flipped;
+      const rX = (thingOne*1080) + this.mousePX * 30;
       const rY = this.mousePY * -30;
       return {
         transform: `rotateY(${rX}deg) rotateX(${rY}deg)`
@@ -61,20 +61,23 @@ Vue.component('card', {
   },
   methods: {
     handleMouseMove(e) {
+      this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width/2;
+      this.mouseY = e.pageY -  this.$refs.card.offsetTop - this.height/2;
 
-      this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2;
-      this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2;
     },
     handleMouseEnter() {
+      flipped = 0;
       clearTimeout(this.mouseLeaveDelay);
     },
     handleMouseLeave() {
       this.mouseLeaveDelay = setTimeout(() => {
         this.mouseX = 0;
         this.mouseY = 0;
+        flipped = 0;
       }, 1000);
     },
-    handleMouseClick() {
+    handleMouseClick(){
+      flipped ^= 1;
       require("electron").shell.openExternal(this.link);
     }
   }
@@ -91,7 +94,6 @@ const app3 = new Vue({
 const app4 = new Vue({
   el: '#app4'
 });
-
 const app5 = new Vue({
   el: '#app5'
 });
