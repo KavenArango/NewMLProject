@@ -97,4 +97,7 @@ const app4 = new Vue({
 const app5 = new Vue({
   el: '#app5'
 });
+const app6 = new Vue({
+  el: '#app6'
+});
 
