@@ -16,10 +16,10 @@ const createWindow = () => {
   // Create the browser window.
 
   const mainWindow = new BrowserWindow({
-    width: 1920,
-    height: 1080,
-    minWidth: 400,
-    minHeight: 100,
+    width: 400,
+    height: 100,
+    minWidth: 600,
+    minHeight: 600,
     frame: true,
     webPreferences: {
       nodeIntegration: true
@@ -46,7 +46,7 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
-  exec('python -m jupyter notebook stop', (err, stdout, stderr) => { });
+  exec('python -m jupyter notebook stop 8888', (err, stdout, stderr) => { });
 });
 
 
