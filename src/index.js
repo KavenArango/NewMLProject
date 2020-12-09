@@ -1,7 +1,7 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, screen } = require('electron');
 const path = require('path');
 const { exec } = require('child_process');
-
+var cwidth, cheight;
 
 //exec('cd .//JNotebook', (err, stdout, stderr) => { });
 exec('cd .//JNotebook && python -m notebook --no-browser', (err, stdout, stderr) => { });
@@ -14,13 +14,14 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 
 const createWindow = () => {
   // Create the browser window.
-
+  var w = screen.getPrimaryDisplay().workAreaSize.width;
+  var h = screen.getPrimaryDisplay().workAreaSize.height;
   const mainWindow = new BrowserWindow({
-    width: 400,
-    height: 100,
-    minWidth: 600,
-    minHeight: 600,
-    frame: true,
+    width: w,
+    height: h,
+    minWidth: 200,
+    minHeight: 100,
+    frame: false,
     webPreferences: {
       nodeIntegration: true
     }
