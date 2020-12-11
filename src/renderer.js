@@ -5,6 +5,8 @@ const classificationBtn = document.getElementById('classificationFolder')
 const unsupervisedBtn = document.getElementById('unsupervisedFolder')
 const advancedBtn = document.getElementById('advancedFolder')
 const devBtn = document.getElementById('devFolder')
+const csvBtn = document.getElementById('csvFolder')
+
 
 basicsBtn.addEventListener('click', function (event) {
     shell.openPath(path.join(__dirname, '../JNotebook/The_basics/'))
@@ -28,4 +30,8 @@ advancedBtn.addEventListener('click', function (event) {
 
 devBtn.addEventListener('click', function (event) {
     shell.openPath(path.join(__dirname, '../JNotebook/Development/'))
+})
+
+csvBtn.addEventListener('click', function (event) {
+    shell.openPath(path.join(__dirname, '../JNotebook/CSV/'))
 })

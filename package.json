@@ -1,6 +1,6 @@
 {
   "name": "mlproject",
-  "productName": "Machine Learning",
+  "productName": "Machine Learning Portal",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
@@ -24,7 +24,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "mlproject"
+            "name": "Machine Learning Portal"
           }
         },
         {

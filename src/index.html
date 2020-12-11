@@ -11,9 +11,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-<!-- <button type="button" style="float: right;" onclick="window.close();">Close</button> -->
+
+<div style="position: fixed;width: 100%;">
+  <div style="text-align:right;">
+    <button class="button" id="csvFolder">CSV Folder</button> <!-- Comment to make button fixed & Uncomment line 24 -->
+    <button class="exit_button" onclick="javascript:window.close()">Exit</button> <!-- Comment to remove exit button -->
+  </div>
+</div>
 
 <body>
+  <!-- <div style="text-align:left;">
+    <button class="button" id="csvFolder">CSV Folder</button> <!-- Uncomment to make button static & Comment line 17 --!>
+  </div> -->
   <h1 class="title">Machine Learning Portal</h1>
   <h1 class="header">The Basics</h1>
   <div id="app1" class="container">
