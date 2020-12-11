@@ -1,6 +1,6 @@
 {
   "name": "mlproject",
-  "productName": "mlproject",
+  "productName": "Machine Learning",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",

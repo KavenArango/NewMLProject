@@ -1,10 +1,24 @@
+var process = require('process');
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const { exec } = require('child_process');
 
+console.log('cd ', path.join(__dirname, '..\\JNotebook'))
+// cd .//JNotebook && python -m notebook --no-browser
 
-//exec('cd .//JNotebook', (err, stdout, stderr) => { });
-exec('cd .//JNotebook && python -m notebook --no-browser', (err, stdout, stderr) => { });
+exec(('cd ' + path.join(__dirname, '..\\JNotebook') + ' && python -m notebook --no-browser --NotebookApp.token=\'\' --NotebookApp.password=\'\' --port=65505'), (err, stdout, stderr) => {
+
+  console.log(err)
+});
+
+
+
+
+//exec('python -m notebook --no-browser', (err, stdout, stderr) => {
+//  console.log(err)
+//});
+
+
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -43,10 +57,12 @@ app.on('ready', createWindow);
 // explicitly with Cmd + Q.
 // var kill = require('tree-kill');
 app.on('window-all-closed', () => {
+  exec('python -m jupyter notebook stop 65505', (err, stdout, stderr) => { });
   if (process.platform !== 'darwin') {
     app.quit();
+
   }
-  exec('python -m jupyter notebook stop 8888', (err, stdout, stderr) => { });
+  exec('python -m jupyter notebook stop 65505', (err, stdout, stderr) => { });
 });
 
 
